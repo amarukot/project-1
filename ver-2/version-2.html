@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- bootstrap css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="v2-style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ovz6auw.css">
+    <script src="v2-questions.js" defer></script>
+    <script src="v2-script.js" defer></script>
+</head>
+
+<body class="bg text-dark">
+    <header class="bg-dark text-light row align-items-center mx-auto my-3">
+        <div class="title col-8">
+            <h1>NBA Trivia Game</h1>
+        </div>
+        <div class="col-3 text-right">
+            <h3 class="scoreboard">SCORE </h3>
+        </div>
+        <div class="col-1 text-right">
+            <h1 id="score" class="scoreboard">00</h1>
+        </div>
+    </header>
+
+    <main class="row align-items-center mx-4">
+        <!-- ROUND HEADERS & BALL IMG -->
+        <section class="round-section col-sm-auto px-0 container">
+            <div class="round-number active-round text-center" id="board-1" data-toggle="modal" data-target="#modal-1">
+                <span>ROUND 1</span>
+                <p id="round-start" class="">click to start</p>
+            </div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-1" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-2" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-3" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-4" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-5" src="rwb-bball.png" alt="ball">
+            </div>
+        </section>
+        <section class="round-section col-sm-auto px-0 container">
+            <div class="round-number text-center" id="board-2" data-toggle="modal" data-target="">
+                <span class="xxx">ROUND 2</span>
+            </div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-6" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-7" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-8" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-9" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-10" src="rwb-bball.png" alt="ball">
+            </div>
+        </section>
+        <section class="round-section col-sm-auto px-0 container">
+            <div class="round-number text-center" id="board-3" data-toggle="modal" data-target="">
+                <span class="xxx">ROUND 3</span>
+            </div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-11" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-12" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-13" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-14" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-15" src="rwb-bball.png" alt="ball">
+            </div>
+        </section>
+        <section class="round-section col-sm-auto px-0 container">
+            <div class="round-number text-center" id="board-4" data-toggle="modal" data-target="">
+                <span class="xxx">ROUND 4</span>
+            </div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-16" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-17" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-18" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-19" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-20" src="rwb-bball.png" alt="ball">
+            </div>
+        </section>
+        <section class="round-section col-sm-auto px-0 container">
+            <div class="round-number text-center" id="board-5" data-toggle="modal" data-target="">
+                <span class="xxx">ROUND 5</span>
+            </div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-21" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-22" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-23" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-24" src="bball.png" alt="ball"></div>
+            <div class="text-center"><img class="imgBalls my-2 invisible" id="ball-25" src="rwb-bball.png" alt="ball">
+            </div>
+        </section>
+
+        <!-- ROUND 1 MODALS -->
+        <section>
+            <!-- Question 1 modal -->
+            <div class="modal fade text-dark" id="modal-1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-1-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-1-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-1" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-1"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-1" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-1"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-1" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-1"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-1" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-1"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-1" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-1"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-1" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-2" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 2 modal -->
+            <div class="modal fade text-dark" id="modal-2" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-2-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-2-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-2" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-2"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-2" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-2"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-2" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-2"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-2" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-2"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-2" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-2"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-2" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-3" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 3 modal -->
+            <div class="modal fade text-dark" id="modal-3" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-3-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-3-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-3" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-3"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-3" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-3"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-3" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-3"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-3" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-3"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-3" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-3"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-3" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-4" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 4 modal -->
+            <div class="modal fade text-dark" id="modal-4" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-4-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-4-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-4" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-4"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-4" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-4"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-4" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-4"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-4" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-4"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-4" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-4"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-4" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-5" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 5 modal -->
+            <div class="modal fade text-dark" id="modal-5" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-5-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-5-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-5" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-5"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-5" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-5"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-5" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-5"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-5" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-5"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-5" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-5"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-5" class="btn btn-primary submit-buttons"
+                                    data-dismiss="modal">End Round</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ROUND 2 MODALS -->
+        <section>
+            <!-- Question 6 modal -->
+            <div class="modal fade text-dark" id="modal-6" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-6-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-6-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-6" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-6"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-6" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-6"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-6" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-6"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-6" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-6"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-6" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-6"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-6" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-7" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 7 modal -->
+            <div class="modal fade text-dark" id="modal-7" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-7-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-7-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-7" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-7"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-7" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-7"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-7" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-7"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-7" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-7"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-7" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-7"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-7" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-8" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 8 modal -->
+            <div class="modal fade text-dark" id="modal-8" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-8-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-8-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-8" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-8"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-8" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-8"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-8" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-8"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-8" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-8"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-8" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-8"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-8" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-9" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 9 modal -->
+            <div class="modal fade text-dark" id="modal-9" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-9-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-9-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-9" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-9"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-9" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-9"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-9" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-9"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-9" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-9"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-9" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-9"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-9" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-10" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 10 modal -->
+            <div class="modal fade text-dark" id="modal-10" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-10-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-10-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-10" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-10"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-10" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-10"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-10" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-10"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-10" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-10"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-10" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-10"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-10" class="btn btn-primary submit-buttons"
+                                    data-dismiss="modal">End Round</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ROUND 3 MODALS -->
+        <section>
+            <!-- Question 11 modal -->
+            <div class="modal fade text-dark" id="modal-11" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-11-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-11-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-11" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-11"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-11" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-11"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-11" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-11"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-11" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-11"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-11" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-11"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-11" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-12" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 12 modal -->
+            <div class="modal fade text-dark" id="modal-12" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-12-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-12-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-12" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-12"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-12" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-12"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-12" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-12"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-12" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-12"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-12" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-12"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-12" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-13" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 13 modal -->
+            <div class="modal fade text-dark" id="modal-13" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-13-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-13-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-13" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-13"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-13" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-13"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-13" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-13"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-13" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-13"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-13" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-13"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-13" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-14" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 14 modal -->
+            <div class="modal fade text-dark" id="modal-9" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-14-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-14-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-14" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-14"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-14" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-14"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-14" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-14"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-14" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-14"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-14" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-14"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-14" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-15" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 15 modal -->
+            <div class="modal fade text-dark" id="modal-15" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-15-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-15-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-15" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-15"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-15" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-15"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-15" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-15"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-15" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-15"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-15" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-15"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-15" class="btn btn-primary submit-buttons"
+                                    data-dismiss="modal">End Round</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ROUND 4 MODALS -->
+        <section>
+            <!-- Question 16 modal -->
+            <div class="modal fade text-dark" id="modal-16" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-16-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-16-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-16" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-16"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-16" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-16"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-16" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-16"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-16" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-16"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-16" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-16"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-16" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-17" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 17 modal -->
+            <div class="modal fade text-dark" id="modal-17" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-17-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-17-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-17" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-17"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-17" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-17"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-17" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-17"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-17" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-17"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-17" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-17"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-17" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-18" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 18 modal -->
+            <div class="modal fade text-dark" id="modal-18" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-18-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-18-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-18" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-18"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-18" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-18"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-18" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-18"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-18" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-18"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-18" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-18"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-18" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-19" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 19 modal -->
+            <div class="modal fade text-dark" id="modal-19" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-19-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-19-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-19" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-19"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-19" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-19"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-19" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-19"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-19" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-19"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-19" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-19"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-19" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-20" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 20 modal -->
+            <div class="modal fade text-dark" id="modal-20" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-20-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-20-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-20" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-20"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-20" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-20"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-20" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-20"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-20" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-20"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-20" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-20"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-20" class="btn btn-primary submit-buttons"
+                                    data-dismiss="modal">End Round</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ROUND 5 MODALS -->
+        <section>
+            <!-- Question 21 modal -->
+            <div class="modal fade text-dark" id="modal-21" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-21-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-21-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-21" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-21"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-21" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-21"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-21" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-21"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-21" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-21"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-21" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-21"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-21" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-22" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 22 modal -->
+            <div class="modal fade text-dark" id="modal-22" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-22-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-22-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-22" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-22"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-22" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-22"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-22" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-22"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-22" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-22"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-22" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-22"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-22" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-23" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 23 modal -->
+            <div class="modal fade text-dark" id="modal-23" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-23-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-23-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-23" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-23"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-23" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-23"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-23" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-23"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-23" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-23"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-23" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-23"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-23" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-24" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 24 modal -->
+            <div class="modal fade text-dark" id="modal-24" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-24-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-24-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-24" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-24"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-24" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-24"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-24" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-24"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-24" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-24"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-24" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-24"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-24" class="btn btn-primary submit-buttons"
+                                    data-toggle="modal" data-target="#modal-25" data-dismiss="modal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Question 10 modal -->
+            <div class="modal fade text-dark" id="modal-25" tabindex="-1" role="dialog" aria-hidden="true"
+                data-backdrop="static">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-25-label">Modal title</h5>
+                        </div>
+                        <div class="modal-body" id="modal-25-choices">
+                            <!-- answer options here -->
+                            <form class="form-check row">
+                                <input class="radio-buttons ans-options-25" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-25"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-25" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-25"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-25" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-25"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-25" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-25"></label>
+                                <div class="w-100"></div>
+                                <input class="radio-buttons ans-options-25" type="radio" name="answer-options"
+                                    id="question-1" value="">
+                                <label for="question-1" class="ans-opt-labels-25"></label>
+                                <div class="w-100"></div>
+                                <button type="button" id="submit-button-25" class="btn btn-primary submit-buttons"
+                                    data-dismiss="modal">End Round</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- bootstrap js plugins -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

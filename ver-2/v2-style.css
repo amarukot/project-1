@@ -1,0 +1,70 @@
+.bg { 
+    background-color: lightblue;
+    background-image: url("bg-court-2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: unibody-8-new, sans-serif;
+}
+
+header {
+    opacity: .75;
+}
+.questions {
+    color: white
+}
+
+.round-number {
+    background-color: slategray;
+    height: 100px;
+    width: 150px;
+    display: block;
+}
+
+.active-round {
+    background-color: orange;
+}
+
+.imgBalls {
+    height: 75px;
+    width: 75px;
+}
+.imgBallsOff {
+    height: 75px;
+    width: 75px;
+    filter: grayscale(1);
+}
+
+h1, h2, .modal-title {
+    font-family: unibody-8-new, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+h1 {font-size: 250%;}
+h2 {font-size: 200%;}
+
+p {
+    font-size: 80%;
+    margin: auto;
+}
+
+h3, #active-question, .answer-choices, .answer-options, .round-section {
+    font-family: unibody-8-new, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+}
+
+button {
+    font-family: unibody-8-new, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 100%;
+}
+
+/* .graphics {
+    background-size: contain;
+    background-position: right top;
+    background-image: url("./img/arcade_basketball_player-2.gif");
+    background-repeat: no-repeat;
+
+} */
