@@ -230,4 +230,3 @@ function checkAnswer (e){
 * added toggling ball images depending on correct/incorrect answer
 * fixed layout and question progression through modal windows 
 
-# project-1
