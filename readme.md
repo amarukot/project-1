@@ -8,6 +8,8 @@
 Version 1 (https://amarukot.github.io/project-1/) <br>
 Version 2 (https://amarukot.github.io/project-1/ver-2/version-2.html)
 
+current URL: https://nba-trivia-game.netlify.com/ 
+
 ## Bronze, Silver, Gold plans
 
 ### Bronze
