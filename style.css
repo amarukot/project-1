@@ -1,11 +1,11 @@
-.questions {
-    color: white
+:root {
+  --bg-color: #24ace5;
+  --font-primary: unibody-8-new;
+  --font-secondary: ;
 }
 
 .bg {
-    /* background-image: url("./img/arcade_basketball_player.gif"); */
-    /* background-size: cover; */
-    background-color: #24ACE5
+  background-color: var(--bg-color);
 }
 
 /* .scoreboard {
@@ -14,37 +14,43 @@
     font-style: normal;
 } */
 
-h1, h2 {
-    font-family: unibody-8-new, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-h1 {font-size: 250%;}
-h2 {font-size: 200%;}
-
+h1,
+h2,
 p {
-    font-size: 100%;
-    margin: auto;
+  font-family: unibody-8-new, sans-serif;
+  font-style: normal;
+}
+h1 {
+  font-size: 250%;
+  font-weight: 700;
+}
+h2 {
+  font-size: 200%;
+  font-weight: 700;
 }
 
-h3, #active-question, .answer-choices {
-    font-family: unibody-8-new, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 120%;
+.footnote {
+  font-size: 1vw;
+}
+
+h3,
+#active-question,
+.answer-choices {
+  font-family: var(--font-primary), sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 120%;
 }
 
 button {
-    font-family: unibody-8-new, sans-serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 100%;
+  font-family: var(--font-primary), sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 100%;
 }
 
-/* .graphics {
-    background-size: contain;
-    background-position: right top;
-    background-image: url("./img/arcade_basketball_player-2.gif");
-    background-repeat: no-repeat;
-
-} */
+.custom-footer {
+  position: fixed;
+  bottom: 0;
+  transform: translateX(50%);
+}
