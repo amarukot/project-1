@@ -5,9 +5,11 @@
 **Wireframe**
 (https://xd.adobe.com/view/d95f7984-fbe3-4a9a-7921-339119fd82af-af6e/)
 
-**Preview** <br>
+**Preview** <br> (prior to moving files outside of amarukot.github.io)
 Version 1 (https://amarukot.github.io/project-1/) <br>
 Version 2 (https://amarukot.github.io/project-1/ver-2/version-2.html)
+
+current URL: https://nba-trivia-game.netlify.com/
 
 ## Bronze, Silver, Gold plans
 
